@@ -53,3 +53,7 @@ Route::get('/user/viewreserv.blade.php', 'reservationcontroller@viewreserv')->na
 //user delete reservation
 Route::delete('/user/viewreserv.blade.php/{id}', 'reservationcontroller@delete')->name("user.delete");
 
+//admin view reservation
+Route::get('/admin/viewreserv.blade.php', 'reservationcontroller@adminviewreserv')->name('adminviewreserv')->middleware('admin');
+//admin delete reservation
+Route::delete('/admin/viewreserv.blade.php/{id}', 'reservationcontroller@admindelete')->name("admin.delete")->middleware('admin');

@@ -110,7 +110,24 @@ class ReservationController extends Controller
     }
 
 
+    //admin view reservation
+    public function adminviewreserv ()
+    {
+        $res=reservation::all();
+        return view('admin.viewreserv',compact('res'));
+    }
 
+    //admin delete reservation
+    public function admindelete($id)
+    {
+        $reservation =reservation::find($id);
+        $room=rooms::find($reservation->rooms_id);
+        $room->status='available';
+        $room->save();
+        $reservation->delete();
+
+        return redirect('/admin/viewreserv.blade.php');
+    }
 
 
 }
