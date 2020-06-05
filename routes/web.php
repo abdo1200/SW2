@@ -48,4 +48,8 @@ Route::put('/user/viewprofile.blade.php', 'usercontroller@update');
 Route::get('/user/booking.blade.php', 'reservationcontroller@bookingview')->name('bookingview');
 Route::put('/home', 'reservationcontroller@booking');
 
+//user view reservation
+Route::get('/user/viewreserv.blade.php', 'reservationcontroller@viewreserv')->name('viewreserv');
+//user delete reservation
+Route::delete('/user/viewreserv.blade.php/{id}', 'reservationcontroller@delete')->name("user.delete");
 

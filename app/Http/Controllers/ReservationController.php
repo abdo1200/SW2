@@ -90,6 +90,26 @@ class ReservationController extends Controller
         }
     }
 
+    //user view reservation
+    public function viewreserv ()
+    {
+        $user = auth()->user();
+        $res=DB::select("select * from reservations where user_id='$user->id';");
+        return view('user.viewreserv',compact('res'));
+    }
+    //user delete reservation
+    public function delete($id)
+    {
+        $reservation =reservation::find($id);
+        $room=rooms::find($reservation->rooms_id);
+        $room->status='available';
+        $room->save();
+        $reservation->delete();
+
+        return redirect('/user/viewreserv.blade.php');
+    }
+
+
 
 
 
