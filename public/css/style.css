@@ -1,0 +1,118 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav {
+    background-color: white;
+}
+
+
+/* header section */
+
+.header,
+.admin-header {
+    background-image: url('../images/room.jpg');
+    background-size: 100% 545px;
+    height: 545px;
+}
+
+.register-header {
+    background-image: url('../images/room.jpg');
+    background-size: 100% 750px;
+    height: 750px;
+    width: 100%;
+}
+
+.admin-header .btn {
+    background-color: steelblue;
+    color: white;
+    height: 100px;
+    width: 200px;
+    font-size: 20px;
+    margin-top: 130px;
+}
+
+.header button {
+    background-color: steelblue;
+    color: white;
+}
+
+.header p {
+    color: white;
+}
+
+.header .head-col {
+    background-color: steelblue;
+    padding-top: 20px;
+    margin-top: 150px;
+}
+
+.header .text-head {
+    color: white;
+    font-size: 17px;
+    background-color: ;
+}
+
+.social-footer {
+    padding-top: 20px;
+}
+
+.login-form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: steelblue;
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+}
+
+
+/*----------------------about---------------------*/
+
+.about-header h1::before,
+.about-header h1::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid steelblue;
+}
+
+.about-header h1::before {
+    top: 0;
+    left: 0;
+    border-width: 5px 0 0 5px;
+}
+
+.about-header h1::after {
+    right: 0;
+    bottom: 0;
+    border-width: 0 5px 5px 0;
+}
+
+.about .about-content .about-col .about-i {
+    color: steelblue;
+    padding-right: 10px;
+}
+
+.about .about-content .about-col {
+    font-size: 20px;
+}
+
+.about-content {
+    margin-left: 100px;
+}
+
+
+/*-----------------gallary--------------------------*/
+
+.gallary img {
+    height: 200px;
+    filter: grayscale();
+}
+
+.gallary img:hover {
+    transform: scale(1.2);
+    transition: .5s;
+    filter: none;
+}
